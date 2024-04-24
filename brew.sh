@@ -30,6 +30,7 @@ brew cleanup
 # Define an array of packages to install using Homebrew.
 packages=(
     "python"
+    "anaconda"
     "bash"
     "zsh"
     "git"
@@ -37,6 +38,9 @@ packages=(
     "pylint"
     "black"
     "node"
+    "go"
+    "rust"
+    "postgresql@15"
 )
 
 # Loop over the array to install each application.
@@ -68,7 +72,7 @@ $(brew --prefix)/bin/git config --global user.name "$git_user_name"
 $(brew --prefix)/bin/git config --global user.email "$git_user_email"
 
 # Create the tutorial virtual environment I use frequently
-$(brew --prefix)/bin/python3 -m venv "${HOME}/tutorial"
+# $(brew --prefix)/bin/python3 -m venv "${HOME}/tutorial"
 
 # Install Prettier, which I use in both VS Code and Sublime Text
 $(brew --prefix)/bin/npm install --global prettier
@@ -80,14 +84,19 @@ apps=(
     "brave-browser"
     "sublime-text"
     "visual-studio-code"
-    "virtualbox"
     "spotify"
     "discord"
-    "google-drive"
-    "gimp"
-    "vlc"
     "rectangle"
     "postman"
+    "raycast"
+    "dbeaver-community"
+    "obsidian"
+    "blender"
+    "bitwarden"
+    "docker"
+    "drawio"
+    "figma"
+    "linear"
 )
 
 # Loop over the array to install each application.
